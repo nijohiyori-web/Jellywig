@@ -1,0 +1,16 @@
+export const emergencyData = [
+  { item: '髮網', price: 10 },
+  { item: '壓髮帽', price: 10 },
+  { item: '嬰兒直假睫毛', price: 90 },
+  { item: '小惡魔假睫毛', price: 120 },
+  { item: '白色假睫毛', price: 100 },
+  { item: '眼線筆 (黑)', price: 70 },
+  { item: '眼線筆 (白)', price: 70 },
+  { item: '小黑夾 5 入', price: 10 },
+  { item: '別針 1 入', price: 2 },
+  { item: '拉臉膠帶', price: 50 },
+  { item: '絲襪', price: 70 },
+  { item: '過膝襪', price: 50 },
+  { item: '小腿襪', price: 40 },
+  { item: '絲襪手套', price: 100 },
+];

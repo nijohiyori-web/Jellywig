@@ -1,0 +1,100 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--navbar-height) + 40px) var(--gutter) 80px;
+  background: linear-gradient(180deg, #f9fbfd 0%, #f9f9f9 100%);
+}
+
+.inner {
+  pointer-events: none;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.logoWrap {
+  width: 100%;
+  max-width: 720px;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.heroJellyLink {
+  position: absolute;
+  z-index: -1;
+  width: 110px;
+  height: 89px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  animation: heroBounceX 7s linear infinite alternate,
+             heroBounceY 5.5s linear infinite alternate;
+}
+
+.heroJellyLink:hover {
+  transform: scale(1.08);
+}
+
+.heroJelly {
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+
+@keyframes heroBounceX {
+  from { left: 0; }
+  to   { left: calc(100% - 110px); }
+}
+
+@keyframes heroBounceY {
+  from { top: 90px; }
+  to   { top: calc(100% - 89px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroJellyLink {
+    animation: none;
+    left: 8%;
+    top: 22%;
+  }
+}
+
+.subtitle {
+  font-family: var(--font-jp);
+  font-size: clamp(20px, 2.8vw, 32px);
+  font-weight: 500;
+  color: var(--color-primary-deep);
+  letter-spacing: 0.15em;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 120px;
+  }
+  .inner {
+    gap: 24px;
+  }
+}

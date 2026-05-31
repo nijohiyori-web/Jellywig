@@ -1,0 +1,68 @@
+// 作品集資料（依 Figma 順序）
+// portrait: 妳製作的假髮照片（真品）
+// reference: 角色原作圖（沒有就 null）
+export const portfolioData = [
+  {
+    id: 'columbina',
+    source: '原神',
+    character: '哥倫比亞',
+    specs: ['高溫絲 玫瑰網', '總長約 80 公分', '全頭玉米鬚 防炸 修剪'],
+    price: 600,
+    portrait: 'images/portfolio/columbina.png',
+    reference: 'images/characters/columbina.png',
+  },
+  {
+    id: 'manana',
+    source: 'BanG Dream!',
+    character: '純田真奈',
+    specs: ['高溫絲 玫瑰網', '總長約 45 公分', '全頭玉米鬚 防炸 捲髮 二改'],
+    price: 500,
+    portrait: 'images/portfolio/manana.png',
+    reference: 'images/characters/manana.png',
+  },
+  {
+    id: 'sayaka',
+    source: '魔法少女小圓',
+    character: '美樹沙耶香',
+    specs: ['高溫絲 玫瑰網', '總長約 40 公分', '修剪'],
+    price: 400,
+    portrait: 'images/portfolio/sayaka.png',
+    reference: 'images/characters/sayaka.jpg',
+  },
+  {
+    id: 'nene',
+    source: '世界計畫',
+    character: '草薙寧寧',
+    specs: ['高溫絲 玫瑰網', '總長約 80 公分', '修剪 捲髮'],
+    price: 450,
+    portrait: 'images/portfolio/nene.png',
+    reference: 'images/characters/nene.png',
+  },
+  {
+    id: 'sky-wizard',
+    source: 'SKY 光・遇',
+    character: '巫師',
+    specs: ['高溫絲 玫瑰網', '總長約 40 公分', '全頭玉米鬚 防炸'],
+    price: 800,
+    portrait: 'images/portfolio/sky-wizard.png',
+    reference: 'images/characters/sky-wizard.jpg',
+  },
+  {
+    id: 'aki',
+    source: '鏈鋸人',
+    character: '早川秋',
+    specs: ['高溫絲 玫瑰網', '總長約 40 公分', '全頭玉米鬚 防炸'],
+    price: 500,
+    portrait: 'images/portfolio/aki.png',
+    reference: 'images/characters/aki.png',
+  },
+  {
+    id: 'marine',
+    source: 'Hololive 三期生',
+    character: '寶鐘瑪琳',
+    specs: ['高溫絲 玫瑰網', '總長約 80 公分', '修剪 捲髮 防炸 全頭玉米鬚'],
+    price: 700,
+    portrait: 'images/portfolio/marine.png',
+    reference: 'images/characters/marine.webp',
+  },
+];

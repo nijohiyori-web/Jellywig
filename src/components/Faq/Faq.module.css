@@ -1,0 +1,202 @@
+.faq {
+  padding: 80px var(--gutter) 120px;
+  background: var(--color-bg);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ===== 左 sticky 目錄 ===== */
+.toc {
+  position: relative;
+}
+
+.tocSticky {
+  position: sticky;
+  top: calc(var(--navbar-height) + 24px);
+  padding-right: 12px;
+  max-height: calc(100vh - var(--navbar-height) - 48px);
+  overflow-y: auto;
+}
+
+/* 隱藏 sticky 區內的捲軸（保留功能） */
+.tocSticky {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+.tocSticky::-webkit-scrollbar {
+  width: 4px;
+}
+.tocSticky::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+.tocLabel {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--color-text-soft);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.tocList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 1px solid var(--color-border);
+}
+
+.tocLink {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  border-left: 2px solid transparent;
+  margin-left: -1px;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.tocLink:hover {
+  color: var(--color-ink);
+}
+
+.tocLinkActive {
+  color: var(--color-primary-deep);
+  border-left-color: var(--color-primary);
+  font-weight: 500;
+}
+
+.tocNum {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  color: var(--color-text-soft);
+  letter-spacing: 0.05em;
+}
+
+.tocLinkActive .tocNum {
+  color: var(--color-primary);
+}
+
+.tocText {
+  /* 標題可能比較長，允許折行 */
+}
+
+/* ===== 右側答案 ===== */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  /* 最後一題後面留空白，讓滾到底時最後一題還是 active */
+  padding-bottom: 50vh;
+}
+
+.answerBlock {
+  scroll-margin-top: calc(var(--navbar-height) + 24px);
+}
+
+.answerHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.answerNum {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-primary-deep);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.answerQuestion {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+
+.answerBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answerBody p {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+/* ===== 手機版：取消 sticky，目錄移到頂部 ===== */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .tocSticky {
+    position: static;
+    max-height: none;
+    padding-right: 0;
+  }
+
+  .tocList {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 8px 0;
+  }
+
+  .tocLink {
+    border-left: none;
+    border-bottom: none;
+    margin-left: 0;
+  }
+
+  .tocLinkActive {
+    background: var(--color-primary-soft);
+    border-radius: 6px;
+  }
+
+  .answers {
+    gap: 48px;
+    padding-bottom: 80px;
+  }
+
+  .answerQuestion {
+    font-size: 20px;
+  }
+}
