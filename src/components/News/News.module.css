@@ -10,7 +10,7 @@
 
 .heading {
   font-family: var(--font-serif);
-  font-size: 36px;
+  font-size: var(--font-size-titles);
   font-weight: 500;
   color: var(--color-ink);
   letter-spacing: 0.08em;
@@ -94,8 +94,5 @@
   .content {
     grid-template-columns: 1fr;
     gap: 24px;
-  }
-  .alert {
-    font-size: 40px;
   }
 }

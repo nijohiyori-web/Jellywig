@@ -18,6 +18,9 @@
   --font-serif: 'Noto Serif TC', 'Songti TC', serif;
   --font-jp: 'Shippori Mincho', 'Noto Serif JP', serif;
 
+  /* Fluid type */
+  --font-size-title: clamp(24px, 5vw, 36px);
+
   /* Layout */
   --max-width: 1200px;
   --gutter: 32px;
