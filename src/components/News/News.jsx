@@ -23,7 +23,15 @@ function News() {
           <div className={styles.text}>
             <p className={styles.alert}>暫停接單！</p>
             <p className={styles.contact}>
-              聯絡方式 Discord：<strong>Yanyu1099</strong>
+              聯絡方式 Discord：
+              <a
+                className={styles.discord}
+                href="https://discord.gg/2fxBmsGmx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Yanyu1099
+              </a>
             </p>
           </div>
         </div>
