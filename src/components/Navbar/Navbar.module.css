@@ -30,6 +30,12 @@
 .links {
   display: flex;
   gap: 32px;
+  /* 手機上裝不下時可橫向滑動,捲軸隱藏 */
+  scrollbar-width: none;
+}
+
+.links::-webkit-scrollbar {
+  display: none;
 }
 
 .links a {
@@ -39,6 +45,7 @@
   transition: color 0.2s ease;
   position: relative;
   padding: 4px 0;
+  white-space: nowrap;
 }
 
 .links a:hover {
@@ -72,10 +79,16 @@
 }
 
 @media (max-width: 640px) {
+  .inner {
+    padding: 0 16px;
+  }
   .links {
-    gap: 10px;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
   }
   .links a {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
